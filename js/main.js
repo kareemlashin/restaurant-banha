@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    $("#close-mop").click(function(){
+        $("#nav-social").hide();
+    })
+    $("#close-estranut-details").click(function(){
+        $("#popup-details").hide();
+    })
+    $("#close-notification").click(function(){
+        $("#notification").hide();
+
+    })
     $("#loading-page").fadeOut(1000, function () {
         $("body").css({ overflow: "auto" })
     });
@@ -59,8 +69,9 @@ $("#popup-details").mouseup(function(e) {
         loop: true,
         margin: 10,
         nav: false,
+        dots:true,
         autoplay:true,
-        autoplayTimeout:1000,
+        autoplayTimeout:2000,
         autoplayHoverPause:true,
         rtl: owlDirection,
         responsive: {
@@ -75,20 +86,35 @@ $("#popup-details").mouseup(function(e) {
             }
         }
     });
-    $('.multiple-items').slick({
-        rtl: true,
-        dots: false,
-        arrows: false,
-        loop:false,
-        slidesToShow: 4,
-        slidesToScroll: 3,
-      })
 
-   
+      var width = $(window).width();
+      if(width > 700 )
+      {
+        $('.multiple-items').slick({
+            rtl: true,
+            dots: false,
+            arrows: false,
+            loop:false,
+            slidesToShow: 5.5,
+            slidesToScroll: 3,
+          })}else if(width < 700){
+            $('.multiple-items').slick({
+                rtl: true,
+                dots: false,
+                arrows: false,
+                loop:false,
+                slidesToShow: 5.5,
+                slidesToScroll: 3,
+              })
+      }
+      $('.item-food').click( function() {
+     
+        $(this).addClass("active-item");
+        $(".item-food").not(this).addClass('un-active-item');
+    });
   $('select').niceSelect();
   $('#select-restranut').on('change', function()
   {
-      alert( this.value );
       $(".numbers-restranut").hide();
       let valChange=this.value;
       $("."+valChange+"-number").show();
