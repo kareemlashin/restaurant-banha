@@ -1496,3 +1496,17 @@ body {
 .owl-dot.active {
   background-color: #DF1D40 !important;
 }
+
+.btn-phone {
+  background-color: #DF1D40 !important;
+  font-size: 14px !important;
+}
+
+.btn-phone a {
+  color: #fff !important;
+}
+
+.numbers-restranut li {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
