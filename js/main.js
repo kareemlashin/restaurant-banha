@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    $(".item-notification").click(function(){
+        $("#notification").hide();
+        $("#offers-item").css({display:"flex"});
+    })
+    $("#offers-item").mouseup(function(e) {
+        var container9 = $(".box-offers");
+        if (!container9.is(e.target) && container9.has(e.target).length ===0) {
+        $("#offers-item").hide();
+        }
+    });
     $("#close-mop").click(function(){
         $("#nav-social").hide();
     })
@@ -108,9 +118,9 @@ $("#popup-details").mouseup(function(e) {
               })
       }
       $('.item-food').click( function() {
-     
+        $('.item-food').addClass("un-active-item");
+        $('.item-food').removeClass("active-item");
         $(this).addClass("active-item");
-        $(".item-food").not(this).addClass('un-active-item');
     });
   $('select').niceSelect();
   $('#select-restranut').on('change', function()
