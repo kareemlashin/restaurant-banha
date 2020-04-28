@@ -1628,3 +1628,7 @@ top: 3%;}
     text-align: center;
     font-size: 14px !important;
 }}
+
+    .owl-dot.active{
+        background-color: $allColor !important;
+    }

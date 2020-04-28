@@ -1492,3 +1492,7 @@ body {
     font-size: 14px !important;
   }
 }
+
+.owl-dot.active {
+  background-color: #DF1D40 !important;
+}
