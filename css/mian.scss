@@ -1444,7 +1444,7 @@ body{
 {
     .item-food
     {
-        opacity: 0.4;
+        opacity: 0.4 !important;
 
     }
     .active-item
@@ -1780,3 +1780,54 @@ label {
     display: inline-block !important;
 padding-left: 5px;
 }}
+
+@media(max-width:700px)
+{
+    #all .selection label, #all .system .selection label {
+       
+        font-size: 14px !important;
+    }
+}
+
+#all{
+
+    .owl-carousel .owl-item img {
+        display: inline-block;
+    }
+    .img-item{
+        width: 25px !important;
+        height: 25px !important;
+        padding-left: 5px;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0rem !important;
+    }}
+
+    .nav-links
+    {
+    .selection {
+      color:#000;
+  
+    }
+      
+       .selection label , .system .selection label{
+        display: inline-block;
+        color: #000  !important;
+        cursor: pointer;
+        width: 100%;
+      }
+    
+       .selection input[type=checkbox] ,.system .selection input[type=checkbox]{
+            display: none;
+    
+    }
+      
+       .selection input[type=checkbox]:checked ~ label ,.system .selection input[type=checkbox]:checked ~ label{
+        color: #000 !important;
+  
+    }
+    
+    
+  
+}

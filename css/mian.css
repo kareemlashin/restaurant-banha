@@ -1329,7 +1329,7 @@ body {
 }
 
 .multiple-items .item-food {
-  opacity: 0.4;
+  opacity: 0.4 !important;
 }
 
 .multiple-items .active-item {
@@ -1632,4 +1632,44 @@ body {
 #all .slick-slide img {
   display: inline-block !important;
   padding-left: 5px;
+}
+
+@media (max-width: 700px) {
+  #all .selection label, #all .system .selection label {
+    font-size: 14px !important;
+  }
+}
+
+#all .owl-carousel .owl-item img {
+  display: inline-block;
+}
+
+#all .img-item {
+  width: 25px !important;
+  height: 25px !important;
+  padding-left: 5px;
+}
+
+#all label {
+  display: inline-block;
+  margin-bottom: 0rem !important;
+}
+
+.nav-links .selection {
+  color: #000;
+}
+
+.nav-links .selection label, .nav-links .system .selection label {
+  display: inline-block;
+  color: #000  !important;
+  cursor: pointer;
+  width: 100%;
+}
+
+.nav-links .selection input[type=checkbox], .nav-links .system .selection input[type=checkbox] {
+  display: none;
+}
+
+.nav-links .selection input[type=checkbox]:checked ~ label, .nav-links .system .selection input[type=checkbox]:checked ~ label {
+  color: #000 !important;
 }

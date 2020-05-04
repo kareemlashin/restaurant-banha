@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    $('.item-food').click( function() {
+        let catgry=$(this).attr("catgry");
+        alert(catgry);
+        
+        if($(this).hasClass("active-item"))
+        {
+            $(this).removeClass("active-item");
+        }
+        else{
+            $(this).addClass("active-item");
+
+        }
+    });
+
     $(".item-notification").click(function(){
         $("#notification").hide();
         $("#offers-item").css({display:"flex"});
@@ -107,11 +121,14 @@ $("#popup-details").mouseup(function(e) {
                 slidesToScroll: 3,
               })
       }
-      $('.item-food').click( function() {
-        $('.item-food').addClass("un-active-item");
-        $('.item-food').removeClass("active-item");
-        $(this).addClass("active-item");
-    });
+    
+    $('.item-food input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $(this).addClass("active-item");
+        }
+        else if($(this).prop("checked") == false){
+            $(this).removeClass("active-item");
+        }})
   $('select').niceSelect();
   $('#select-restranut').on('change', function()
   {
@@ -126,7 +143,7 @@ $("#popup-details").mouseup(function(e) {
             dots: false,
             arrows: false,
             loop:false,
-            slidesToShow: 5,
+            slidesToShow: 5.5,
             slidesToScroll: 3,
             infinite: false,
 
@@ -138,7 +155,7 @@ $("#popup-details").mouseup(function(e) {
     dots: false,
     arrows: false,
     loop:false,
-    slidesToShow: 3,
+    slidesToShow: 3.5,
     slidesToScroll: 2,
     infinite: false,
 
@@ -149,7 +166,7 @@ $("#popup-details").mouseup(function(e) {
             dots: false,
             arrows: false,
             loop:false,
-            slidesToShow: 2,
+            slidesToShow: 2.3,
             slidesToScroll: 2,
             infinite: false,
 
