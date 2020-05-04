@@ -119,15 +119,15 @@
 }
 
 .w-30 {
-  width: 30%;
+  width: 30% !important;
 }
 
 .w-40 {
-  width: 40%;
+  width: 40% !important;
 }
 
 .w-60 {
-  width: 60%;
+  width: 60% !important;
 }
 
 .w-70 {
@@ -1518,22 +1518,15 @@ body {
 
 .inputGroup label {
   width: 100%;
-  display: block;
   color: #000;
   cursor: pointer;
   position: relative;
   z-index: 2;
-  font-size: 15px;
-  font-weight: 700;
   transition: color 200ms ease-in;
   overflow: hidden;
   background-color: #e2e2e2;
-  border-radius: 5px;
-  height: 100%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .inputGroup label:before {
@@ -1579,48 +1572,64 @@ body {
   border-radius: 15px;
 }
 
-#food-fet .col-4 {
-  padding-right: 4px;
-  padding-left: 4px;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
-  max-width: 20%;
+#all .owl-carousel .owl-item img {
+  display: inline-block;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  #food-fet .col-4 {
-    padding-right: 4px;
-    padding-left: 4px;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
+#all .img-item {
+  width: 25px !important;
+  height: 25px !important;
+  padding-left: 5px;
 }
 
-@media (min-width: 767px) and (max-width: 768px) {
-  #food-fet .col-4 {
-    padding-right: 4px;
-    padding-left: 4px;
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
+#all label {
+  display: inline-block;
+  margin-bottom: 0rem !important;
 }
 
-@media (max-width: 700px) {
-  #food-fet .col-4 {
-    padding-right: 4px;
-    padding-left: 4px;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+#all .selection {
+  text-align: center;
+  background-color: #e2e2e2;
+  color: #000;
+  margin: 5px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
-.scrollbar3 {
-  height: 15vh !important;
+#all .selection label, #all .system .selection label {
+  display: inline-block;
+  color: #000  !important;
+  padding: 0.3em;
+  cursor: pointer;
+  width: 100%;
 }
 
-.scrollbar3 .overflow {
-  min-height: 15vh !important;
+#all .selection input[type=checkbox], #all .system .selection input[type=checkbox] {
+  display: none;
+  text-align: center;
+}
+
+#all .selection input[type=checkbox]:checked ~ label, #all .system .selection input[type=checkbox]:checked ~ label {
+  background-color: #DF1D40;
+  text-align: center;
+  color: #fff !important;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#all input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#all .slick-slide img {
+  display: inline-block !important;
+  padding-left: 5px;
 }

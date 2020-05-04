@@ -53,18 +53,8 @@ $("#popup-details").mouseup(function(e) {
         $("#nav-social").show();
     });
 
-    $("body").mouseup(function(e) {
-        var container6 = $("#catgry");
-        if (!container6.is(e.target) && container6.has(e.target).length === 0) {
-        $("#all-catgry").hide();
-        }
-    });
-    $("#catg-option").click(function(){
-        $("#all-catgry").show();
-    });
-    $("#close-cargry").click(function(){
-        $("#all-catgry").hide();
-    });
+
+
     $("#searchInput").keypress(function(){
         $(".icon-search").hide();
     });
@@ -129,4 +119,40 @@ $("#popup-details").mouseup(function(e) {
       let valChange=this.value;
       $("."+valChange+"-number").show();
   });
+  if(width > 769  )
+      {
+  $('#all .owl-carousel').slick({
+            rtl: true,
+            dots: false,
+            arrows: false,
+            loop:false,
+            slidesToShow: 5,
+            slidesToScroll: 3,
+            infinite: false,
+
+});
+      }else  if(width == 768  )
+      {
+  $('#all .owl-carousel').slick({
+    rtl: true,
+    dots: false,
+    arrows: false,
+    loop:false,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    infinite: false,
+
+});}
+      else if(width < 700 ){
+        $('#all .owl-carousel').slick({
+            rtl: true,
+            dots: false,
+            arrows: false,
+            loop:false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+
+        });
+      }
 });
